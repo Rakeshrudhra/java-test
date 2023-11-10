@@ -1,0 +1,29 @@
+public class Lexicographically{
+
+
+}
+public static void getInput(){
+Scanner sc=new Scanner(System.in);
+int x=nextInt();
+for(int i=0;i<x;i++){
+String name=sc.next();
+System.out.println("Enter the number"+i+name);
+ storedValue(name,x);
+}
+public static void storedValue(String name,int n){
+List <String>x=new List<>;
+for(int i=0;i<n;i++){
+  x.add(name);
+   }
+}
+public static void sortDecent(List<String>y){
+for(String a:y){
+for(int i=0;i<a.length;i++){
+ if(a.charAt(i)<a.charAt(i+1){
+  int temp=a.charAt(i);
+   a.charAt(i)=a.charAt(i+1);
+   a.charAt(i+1)=temp;
+ }
+}
+}
+i just try......
