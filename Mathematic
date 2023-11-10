@@ -1,0 +1,26 @@
+    public static boolean isValidExpression(String expression) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : expression.toCharArray()) {
+            if (ch == '(') {
+                stack.push(ch);
+            } else if (ch == ')') {
+                if (stack.isEmpty() || stack.pop() != '(') {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        String expression1 = "(a+b)(a*b)";
+        String expression2 = "(ab)(ab++)";
+        String expression3 = "((a+b)";
+
+        System.out.println("Expression 1 is " + (isValidExpression(expression1) ? "valid" : "invalid"));
+        System.out.println("Expression 2 is " + (isValidExpression(expression2) ? "valid" : "invalid"));
+        System.out.println("Expression 3 is " + (isValidExpression(expression3) ? "valid" : "invalid"));
+    }
+}
