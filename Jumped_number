@@ -1,0 +1,25 @@
+public class Jumped_Number{
+public static void main(String []args){
+Scanner sc=new Scanner (System.in);
+System.out.println("Enter the number");
+int x=sc.nextInt();
+int remainder=0; int remainder1=0;int quotent=0;
+int count=0;
+int count1=0;
+while(x!=0){
+remainder=x%10;
+quotent=x/10;
+remainder=quotent%10;
+x=x/10;
+if(remainder-remainder1==1){
+count1++;
+  }
+}
+if((count/2)==count){
+system.out.println("jumped number");
+}
+else{
+System.out.println("its not jumped number);
+}
+}
+} 
