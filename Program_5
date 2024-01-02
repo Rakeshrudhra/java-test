@@ -1,0 +1,34 @@
+package java_programs;
+
+public class Program_5 {
+
+   
+	public static void main(String[] args) {
+	
+		int[] prices = {7,1,5,3,6,4};
+		 int minIndex = 0;
+		 
+		    for (int i = 1; i < prices.length; i++) {
+		        if (prices[i] < prices[minIndex]) {
+		            minIndex = i;
+		        }
+		    }
+		    
+		    int maxIndex =minIndex;
+            
+		    for (int i = minIndex+1; i < prices.length; i++) {
+		        if (prices[i] > prices[maxIndex]) {
+		            maxIndex = i;
+		        }
+		    }
+		 
+		    
+		    int profit = prices[maxIndex]-prices[minIndex];
+		    
+		    
+		    System.out.println("The best day for buy stock in given Array :"+minIndex);
+		    System.out.println("The best day for sell stock in given Array :" +maxIndex);
+		    System.out.println("maximum profit  :"+profit);
+    	
+	}
+}
